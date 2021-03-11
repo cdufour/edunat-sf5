@@ -2,4 +2,13 @@ demo8:
   path: /demo8
   controller: App\Controller\DemoController::demo8
 
+demo9bis:
+  path: /demo9bis/{num}
+  controller: App\Controller\DemoController::demo9
+  requirements:
+    num: '\d+'
+  methods:
+    - POST
+    - GET
+
 

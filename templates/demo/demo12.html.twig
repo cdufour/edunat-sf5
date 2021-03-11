@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+<h1 class="danger">{{ title }}</h1>
+<img width="300" src="{{ asset('images/loup.jpg') }}" alt="Image de loup">
+<br>
+<button id="btn" class="btn btn-primary">Masquer l'image</button>
+
+<script>
+
+var message = "JavaScript, mon amour";
+console.log(message);
+
+var btn = document.getElementById('btn');
+btn.addEventListener('click', () => {
+    console.log('click');
+})
+
+</script>
+
+{% endblock %}

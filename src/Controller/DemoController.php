@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -11,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class DemoController extends AbstractController
 {
     /**
-     * @Route("/demo1")
+     * @Route("/demo1", name="demo1")
      */
     public function demo1()
     {
@@ -102,6 +103,57 @@ class DemoController extends AbstractController
     {
         $res = new Response('...');
         return $res;
+    }
+
+    /**
+     * @Route("/demo9/{num}", requirements={"num"="\d+"}, methods={"POST"})
+     */
+    public function demo9($num)
+    {
+        $res = new Response($num * $num);
+        return $res;
+    }
+
+    /**
+     * @Route("/demo10")
+     */
+    public function demo10()
+    {
+        $title = 'Demo 10';
+
+        return $this->render('demo/demo10.html.twig', array(
+            'title' => $title
+        ));
+    }
+
+    /**
+     * @Route("/demo11")
+     */
+    public function demo11()
+    {
+        $title = 'Demo 11';
+
+        $trainees = array(
+            array("fname" => "Alex", "lname" => "AAA", "gender" => "male"),
+            array("fname" => "Manu", "lname" => "BBB", "gender" => "male"),
+            array("fname" => "Stéphanie", "lname" => "CCC", "gender" => "female")
+        );
+
+        return $this->render('demo/demo11.html.twig', array(
+            'title' => $title,
+            'trainees' => $trainees
+        ));
+    }
+
+    /**
+     * @Route("/demo12")
+     */
+    public function demo12()
+    {
+        $title = 'Demo 12';
+        return $this->render('demo/demo12.html.twig', array(
+            'title' => $title
+        ));
     }
 
 }

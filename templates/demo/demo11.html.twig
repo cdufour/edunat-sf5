@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+<h1>{{ title }}</h1>
+<h2>Liste des participants ({{ trainees | length }})</h2>
+
+<ul>
+    {% for trainee in trainees %}
+
+        {% if trainee.gender == 'female' %}
+            <li>{{ trainee.fname }} - {{ trainee.lname | lower }}</li>
+        {% else %}
+            <li>Je suis un homme</li>
+        {% endif %}
+
+    {% endfor %}
+</ul>
+
+{% endblock %}

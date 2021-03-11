@@ -1,0 +1,10 @@
+/*
+Exo 2
+Temps estimé: 10 minutes
+*/
+
+Ajouter une route exos/exo2 au contrôleur ExoController
+Cette route retournera le rendu d'un template twig exo/exo2.html.twig
+Le réponse envoyée au client devra afficher 3 photos dont les noms seront fournis
+par le contrôleur
+Les 3 photos correspondantes devront être placées dans un dossier public/images/exo2

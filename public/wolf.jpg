@@ -1,0 +1,17 @@
+--2021-03-11 14:01:30--  https://resize-parismatch.lanmedia.fr/img/var/news/storage/images/paris-match/actu/environnement/un-loup-aurait-ete-photographie-dans-le-nord-de-la-france-une-premiere-depuis-un-siecle-1682466/27431692-1-fre-FR/Un-loup-aurait-ete-photographie-dans-le-nord-de-la-France-une-premiere-depuis-un-siecle.jpg
+Resolving resize-parismatch.lanmedia.fr (resize-parismatch.lanmedia.fr)... 13.225.29.103, 13.225.29.39, 13.225.29.45, ...
+Connecting to resize-parismatch.lanmedia.fr (resize-parismatch.lanmedia.fr)|13.225.29.103|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 355993 (348K) [image/jpeg]
+Saving to: ‘Un-loup-aurait-ete-photographie-dans-le-nord-de-la-France-une-premiere-depuis-un-siecle.jpg’
+
+     0K .......... .......... .......... .......... .......... 14% 2.76M 0s
+    50K .......... .......... .......... .......... .......... 28% 2.66M 0s
+   100K .......... .......... .......... .......... .......... 43% 8.15M 0s
+   150K .......... .......... .......... .......... .......... 57% 8.36M 0s
+   200K .......... .......... .......... .......... .......... 71% 4.25M 0s
+   250K .......... .......... .......... .......... .......... 86% 9.08M 0s
+   300K .......... .......... .......... .......... .......   100% 12.9M=0.07s
+
+2021-03-11 14:01:31 (4.96 MB/s) - ‘Un-loup-aurait-ete-photographie-dans-le-nord-de-la-France-une-premiere-depuis-un-siecle.jpg’ saved [355993/355993]
+

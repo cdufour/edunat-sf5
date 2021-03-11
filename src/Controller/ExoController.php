@@ -15,4 +15,16 @@ class ExoController extends AbstractController
     {
         return new Response($num * $num);
     }
+
+    /**
+     * @Route("/exos/exo2")
+     */
+    public function exo2(): Response
+    {
+        $photos = ['loup.jpg', 'lupus.jpg', 'wolf.jpg'];
+        
+        return $this->render('exo/exo2.html.twig', array(
+            'photos' => $photos
+        ));
+    }
 }

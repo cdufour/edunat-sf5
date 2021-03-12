@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+<h2>Liste des couleurs</h2>
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>Nom</th>
+        <th>Code héxa</th>
+    </tr>
+
+    {% for color in colors %}
+        <tr>
+            <td>{{ color.name }}</td>
+            <td>{{ color.hexa }}</td>
+        </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

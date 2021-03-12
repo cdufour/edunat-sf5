@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Color;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -155,5 +156,60 @@ class DemoController extends AbstractController
             'title' => $title
         ));
     }
+
+    // === Couche Model ===
+
+    /**
+     * @Route("/demo13", methods="GET", name="color_form")
+     */
+    public function demo13()
+    {
+        return $this->render('demo/demo13.html.twig', array(
+            'colorName' => null
+        ));
+    }
+
+    /**
+     * @Route("/demo13", methods="POST")
+     */
+    public function demo13_post(Request $req)
+    {
+
+        $colorName = $req->request->get('colorName');
+        $hexa = $req->request->get('hexa');
+
+        // ToDo: vérifier $colorName...
+
+        $color = new Color();
+        $color->setName($colorName);
+        $color->setHexa($hexa);
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($color); // requête "stagnante" (en attente)
+        $em->flush(); // exécution de la (des) requête(s)
+
+        return $this->render('demo/demo13.html.twig', array(
+            'colorName' => $color->getName()
+        ));
+    }
+
+    /**
+     * @Route("/demo14", name="color_list")
+     */
+    public function demo14()
+    {
+        $repo = $this->getDoctrine()
+            ->getRepository(Color::class);
+
+        //$colors = $repo->findAll();
+        //$colors = $repo->findBy(['hexa' => ''], ['name' => 'asc'], 10, 0);
+        $colors = $repo->findCustom();
+        
+        return $this->render('demo/demo14.html.twig', array(
+            'colors' => $colors
+        ));
+
+    }
+
 
 }

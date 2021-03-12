@@ -1,4 +1,16 @@
 /*
+Exo 1
+Temps estimé: 10 minutes
+*/
+Créer un controleur "ExoController"
+
+Créer une route exos/exo1 (annotation + méthode associée)
+Cette route devra récupérer un paramètre "num" dans l'url
+La réponse retournée au client sera la valeur de "num" au carrée
+Exemple: si num=4, réponse => 16
+
+
+/*
 Exo 2
 Temps estimé: 10 minutes
 */
@@ -8,3 +20,13 @@ Cette route retournera le rendu d'un template twig exo/exo2.html.twig
 Le réponse envoyée au client devra afficher 3 photos dont les noms seront fournis
 par le contrôleur
 Les 3 photos correspondantes devront être placées dans un dossier public/images/exo2
+
+
+/*
+Exo 3
+Temps estimé: 10 minutes
+*/
+
+Ajouter un lien vers la liste des clients dans la bannière (banner.html.twig)
+Afficher le formulaire de mise à jour d'un client (/client/{id}/edit)
+Ajouter la couleur favorite d'un client dans le tableau de la page /client

@@ -22,19 +22,19 @@ class ColorRepository extends ServiceEntityRepository
     // /**
     //  * @return Color[] Returns an array of Color objects
     //  */
-    /*
-    public function findByExampleField($value)
+    
+    public function findCustom()
     {
         return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('c.id', 'ASC')
-            ->setMaxResults(10)
+            ->where('c.hexa != :v')
+            ->setParameter('v', '')
+            ->orderBy('c.name', 'ASC')
+            //->setMaxResults(10)
             ->getQuery()
             ->getResult()
         ;
     }
-    */
+    
 
     /*
     public function findOneBySomeField($value): ?Color

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+
+{% if not colorName %}
+    <h2>Enregistrement d'une couleur</h2>
+
+    <form method="POST">
+        <input type="text" placeholder="Nom de la couleur" name="colorName" />
+        <input type="text" placeholder="Code hexa" name="hexa" />
+        <button class="btn btn-xs btn-primary">Enregistrer</button>
+    </form>
+
+{% else %}
+
+    <div class="alert alert-success">
+        La couleur <strong>{{ colorName }}</strong> a été enregistrée
+    </div>
+
+{% endif %}
+
+{% endblock %}

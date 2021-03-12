@@ -22,6 +22,11 @@ class Color
      */
     private $name;
 
+    /**
+     * @ORM\Column(type="string", length=6)
+     */
+    private $hexa;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -35,6 +40,18 @@ class Color
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function getHexa(): ?string
+    {
+        return $this->hexa;
+    }
+
+    public function setHexa(string $hexa): self
+    {
+        $this->hexa = $hexa;
 
         return $this;
     }
